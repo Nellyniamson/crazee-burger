@@ -3,39 +3,38 @@ import { useState } from 'react'
 
 export default function LoginPage() {
 
-    // Etats
-  const [prenom, setPrenom] = useState('')
+  // Etats
+  const [inputValue, setInputValue] = useState('')
 
 
-    // comportements
+  // comportements
   const handleSubmit = (event) =>{
     event.preventDefault();
-  };
-
-  const handleChange = (event) =>{
-    setPrenom(event.target.value)
-    console.log(handleChange)
-  };
-
-  const handleClick = (event) =>{
-    
+    alert(`Bonjour ${inputValue}`)
+    setInputValue("")
   }
 
-    // Render
+  const handleChange = (event) =>{
+    setInputValue(event.target.value)
+  }
+
+
+  // Render
   return (
     <>
-    <h1>Bienvenue chez nous</h1>
-    <h3>Connectez-vous</h3>
+        <h1>Bienvenue chez nous</h1>
+        <br />
+        <h3>Connectez-vous</h3>
 
-    <form action='submit' onSubmit={handleSubmit}>
-      <input 
-      type="text" 
-      value={prenom}
-      placeholder='Entrez votre prenom'
-      onChange={handleChange}
-      />
-      <button onClick={handleClick}>Accedez a votre espace</button>
-    </form>
-  </>
+        <form action='submit' onSubmit={handleSubmit}>
+        <input 
+        type="text" 
+        value={inputValue}
+        placeholder='Entrez votre prenom'
+        onChange={handleChange}
+        />
+        <button>Accedez a votre espace</button>
+        </form>
+    </>
   )
 }
