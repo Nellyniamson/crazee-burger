@@ -1,8 +1,15 @@
+import styled from 'styled-components';
 import LoginForm from './LoginForm'
 
 export default function LoginPage() {
  return (
-    <LoginForm></LoginForm>
+    <LoginPageStyled>
+      <div>Logo</div>
+      <LoginForm></LoginForm>
+    </LoginPageStyled>
   )
 }
 
+const LoginPageStyled= styled.div`
+  background:red;
+`;
