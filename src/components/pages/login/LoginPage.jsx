@@ -12,7 +12,7 @@ export default function LoginPage() {
 }
 
 const LoginPageStyled= styled.div`
-  background: red;
+  /* background: red; */
   height: 100vh;
   display: flex;
   align-items: center;

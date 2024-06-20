@@ -14,6 +14,7 @@ const LogoStyled = styled.div`
     /* background-color : blue; */
     display: flex;
     align-items: center;
+    transform: scale(2.5);
 
     h1{
         display: inline;
