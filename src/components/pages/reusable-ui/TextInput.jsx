@@ -4,9 +4,8 @@ import styled from 'styled-components';
 export default function TextInput({value, onChange,Icon, ...extraProps}) {
   return (
     <InputStyled >
-        {Icon && Icon}
-        <input type="text" onChange={onChange} {...extraProps}
-        />
+      {Icon && Icon}
+      <input type="text" onChange={onChange} {...extraProps}/>
     </InputStyled>
           
   )

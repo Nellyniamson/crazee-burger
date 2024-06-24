@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { IoChevronForwardOutline } from "react-icons/io5";
 import { BsPersonCircle } from "react-icons/bs";
 import TextInput from '../reusable-ui/TextInput'; 
+import PrimaryButton from '../reusable-ui/PrimaryButton';
 
 
 export default function LoginForm() {
@@ -38,11 +39,7 @@ export default function LoginForm() {
         
         <div>
           <TextInput value={inputValue} onChange={handleChange} placeholder={"Entrez votre prenom"} required Icon={<BsPersonCircle className='icon' />} className={'input-with-container'}/>
-          
-          <button className="button-with-icon">
-              <span>Accedez a votre espace</span> 
-              <IoChevronForwardOutline className='icon'/>
-          </button>
+          <PrimaryButton label={"Accedez a votre espace"} Icon={<IoChevronForwardOutline className='icon'/>}/>
         </div>
         
         {/* <Link to="/order "> Page order</Link> */}
@@ -77,53 +74,5 @@ const LoginFormStyled = styled.form `
     margin: 20px 10px 10px;
     color: white;
     font-size: 36px;
-  }
-
-
-
-  .button-with-icon{
-
-    width: 100%;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    white-space: nowrap;
-    text-decoration: none;
-    line-height: 1;
-
-    background-color:#ff9f1b;
-    border-radius: 5px;
-    border: 1px solid #ff9f1b;
-    font-size: 15px;
-    color: white;
-    font-weight: 800;
-    padding: 18px 24px;
-
-    &:hover:not(:disabled){
-      background-color: white;
-      color: #ff9f1b;
-      border: 1px solid #ff9f1b;
-      transition: all 200ms ease-out;
-    }
-
-    &:active{
-      color: white;
-      background-color: #ff9f1b;
-      border: 1px solid #ff9f1b;
-    }
-
-    &:disabled{
-      opacity: 0.6;
-      cursor: not-allowed;
-    }
-
-    .icon{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 15px;
-      margin-left: 10px;
-    }
   }
 `
